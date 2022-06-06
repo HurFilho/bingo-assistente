@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "bingo-da-clotilda",
+    "slug": "bingo-da-clotilda",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
