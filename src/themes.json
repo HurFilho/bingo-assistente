@@ -1,0 +1,56 @@
+{
+    "Crotilda": {
+        "id": "05",
+        "name": "Crotilda",
+        "appBgColor": "#2b2d42",
+        "btnFontColorSelected": "#edf2f4",
+        "btnFontColorNotSelected": "#8D99AE",
+        "btnBgSelected": "#d90429",
+        "btnBgNotSelected": "#383B56"
+    },
+    "Crotilda-2": {
+        "id": "00",
+        "name": "Crotilda",
+        "appBgColor": "#fefae0",
+        "btnFontColorSelected": "#023047",
+        "btnFontColorNotSelected": "#fefae0",
+        "btnBgSelected": "#fb8500",
+        "btnBgNotSelected": "#AAAAAA"
+    },
+    "darkYellow": {
+        "id": "01",
+        "name": "Dark yellow",
+        "appBgColor": "#000000",
+        "btnFontColorSelected": "#000000",
+        "btnFontColorNotSelected": "#999999",
+        "btnBgSelected": "#FCA311",
+        "btnBgNotSelected": "#E5E5E5"
+    },
+    "darkBlue": {
+        "id": "02",
+        "name": "Dark Blue",
+        "appBgColor": "#888888",
+        "btnFontColorSelected": "#FFFFFF",
+        "btnFontColorNotSelected": "#999999",
+        "btnBgSelected": "#14213D",
+        "btnBgNotSelected": "#E5E5E5"
+    },
+    "lightYellow": {
+        "id": "03",
+        "name": "Light yellow",
+        "appBgColor": "#FFFFFF",
+        "btnFontColorSelected": "#000000",
+        "btnFontColorNotSelected": "#999999",
+        "btnBgSelected": "#FCA311",
+        "btnBgNotSelected": "#E5E5E5"
+    },
+    "lightBlue": {
+        "id": "04",
+        "name": "Light Blue",
+        "appBgColor": "#FFFFFF",
+        "btnFontColorSelected": "#FFFFFF",
+        "btnFontColorNotSelected": "#999999",
+        "btnBgSelected": "#14213D",
+        "btnBgNotSelected": "#E5E5E5"
+    }
+}

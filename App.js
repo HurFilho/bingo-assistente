@@ -1,21 +1,47 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { NumberPanel } from './src/components/numberPanel'
+import { loadTheme, resetDrawnNumbers } from './src/utils/localStorage';
+import { Sidebar } from './src/components/sidebar';
+import themes from './src/themes.json'
 
 export default function App() {
+  const [theme, setTheme] = useState(themes['darkBlue'])
+  const [lastDrawnNumber, setLastDrawnNumber] = useState('')
+  const [reset, setReset] = useState(false)
+
+  useEffect(() => {
+    const fetchTheme = async () => {
+      const chosenTheme = await loadTheme()
+      chosenTheme.name !== undefined ? setTheme(chosenTheme) : await fetchTheme()
+    }
+    fetchTheme()
+  }, [])
+
+  useEffect(() => {
+    if (reset) {
+      resetDrawnNumbers()
+      setLastDrawnNumber("")
+      setReset(false)
+    }
+  }, [reset])
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={style(theme.appBgColor)}>
+      <NumberPanel theme={theme} setLastDrawnNumber={setLastDrawnNumber} reset={reset}>{8}</NumberPanel>
+      <Sidebar setReset={setReset}>{lastDrawnNumber}</Sidebar>
+      <StatusBar style="dark" hidden />
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
+const style = color => {
+  return StyleSheet.create({
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    flexDirection: 'row',
+    backgroundColor: color,
+    padding: 5,
+  })
+}
