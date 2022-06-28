@@ -9,7 +9,7 @@ const createArray = quantity => {
 export const NumberPanel = props => {
     const [numberQty, setNumberQty] = useState(createArray(props.children))
     return (
-        <View style={{ flex: 7 }}>
+        <View style={{ flex: 5 }}>
             <View style={{ flex: 1 }}>
                 {
                     numberQty.map(item => {

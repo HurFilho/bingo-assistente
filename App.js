@@ -7,8 +7,8 @@ import { Sidebar } from './src/components/sidebar';
 import themes from './src/themes.json'
 
 export default function App() {
-  const [theme, setTheme] = useState(themes['darkBlue'])
-  const [lastDrawnNumber, setLastDrawnNumber] = useState('')
+  const [theme, setTheme] = useState(themes['Crotilda'])
+  const [lastDrawnNumber, setLastDrawnNumber] = useState('0')
   const [reset, setReset] = useState(false)
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function App() {
   useEffect(() => {
     if (reset) {
       resetDrawnNumbers()
-      setLastDrawnNumber("")
+      setLastDrawnNumber("0")
       setReset(false)
     }
   }, [reset])
